@@ -1,7 +1,11 @@
 #!/bin/bash
 
-#Put Hyde files in the html5-boilerplate place
-mv hyde/deploy/* html5-boilerplate
-#mv hyde/deploy/.htaccess blah
+#Hyde
+cd hyde
+hyde gen
+cd -
 
-#cp -u hyde/media html5-boilerplate/
+#HTML5 Boilerplate ant build script
+cd html5-boilerplate/build
+ant minify
+cd -
